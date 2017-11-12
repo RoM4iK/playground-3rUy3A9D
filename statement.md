@@ -14,8 +14,8 @@ function pow(base, exponent) {
     return result;
 }
 
-console.log('2**3 == 8', pow(2,3))
-console.log('7**2 == 49', pow(7,2))
+console.log('Expected: 2**3 == 8; Actual: ', pow(2,3))
+console.log('Expected: 7**2 == 49; Actual: ', pow(7,2))
 ```
 
 # Advanced usage
