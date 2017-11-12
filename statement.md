@@ -1,8 +1,20 @@
-# Рекурсия
+# Recursion
 
+## Use case
+
+### Traditional for loop
 
 ```javascript runnable
-console.log('Hello World!');
+// Pow function
+function pow(base, exponent) {
+    let result = base;
+    for (let i = 0; i < exponent; i++) {
+        result = result * base;
+    }
+}
+
+console.log('2**3 == 8', pow(2,3))
+console.log('7**2 == 49', pow(7,2))
 ```
 
 # Advanced usage
