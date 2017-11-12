@@ -13,8 +13,8 @@ function sum(arr) {
     return result;
 }
 
-console.log(`Array: [1,2,3]; Expected: 6; Actual: ${reduce([1,2,3])}`);
-console.log(`Array: [1,0,1]; Expected: 2; Actual: ${reduce([1,0,1])}`);
+console.log(`Array: [1,2,3]; Expected: 6; Actual: ${sum([1,2,3])}`);
+console.log(`Array: [1,0,1]; Expected: 2; Actual: ${sum([1,0,1])}`);
 ```
 
 ### Sum function with recursion
@@ -28,6 +28,6 @@ function sum(arr, initial = 0) {
     return sum(arr.slice(1), initial + arr[0]);
 }
 
-console.log(`Array: [1,2,3]; Expected: 6; Actual: ${reduce([1,2,3])}`);
-console.log(`Array: [1,0,1]; Expected: 2; Actual: ${reduce([1,0,1])}`);
+console.log(`Array: [1,2,3]; Expected: 6; Actual: ${sum([1,2,3])}`);
+console.log(`Array: [1,0,1]; Expected: 2; Actual: ${sum([1,0,1])}`);
 ```
