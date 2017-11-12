@@ -1,23 +1,32 @@
 # Recursion
 
-## Use case
+## Use cases
 
-### Traditional for loop
+### Reduce function with traditional for loop
 
 ```javascript runnable
-// Pow function
-function pow(base, exponent) {
-    let result = base;
-    for (let i = 1; i < exponent; i++) {
-        result = result * base;
+function reduce(arr) {
+    let result = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        result = result + arr[i];
     }
     return result;
 }
 
-console.log(`Expected: 2**3 == 8; Actual: ${pow(2,3)}`)
-console.log(`Expected: 7**2 == 49; Actual: ${pow(7,2)}`)
+console.log(`Array: [1,2,3]; Expected: 6; Actual: ${reduce([1,2,3)}`)
+console.log(`Array: [1,0,1]; Expected: 2; Actual: ${reduce([1,0,1)}`)
 ```
 
-# Advanced usage
+### Pow function with recursion
 
-If you want a more complex example (external libraries, viewers...), use the [Advanced Node.js template](https://tech.io/select-repo/442)
+Deatiled example: 
+```javascript runnable
+function pow(base, exponent) {
+    if (exponent > 0) {
+        return pow(base * base,
+    }
+    else {
+        
+    }
+}
+```
