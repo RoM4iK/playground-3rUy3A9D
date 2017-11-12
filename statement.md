@@ -11,6 +11,7 @@ function pow(base, exponent) {
     for (let i = 0; i < exponent; i++) {
         result = result * base;
     }
+    return result;
 }
 
 console.log('2**3 == 8', pow(2,3))
