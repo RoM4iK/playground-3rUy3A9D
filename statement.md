@@ -8,7 +8,7 @@
 // Pow function
 function pow(base, exponent) {
     let result = base;
-    for (let i = 0; i < exponent; i++) {
+    for (let i = 1; i < exponent; i++) {
         result = result * base;
     }
     return result;
