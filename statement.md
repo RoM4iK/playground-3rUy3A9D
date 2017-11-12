@@ -22,7 +22,7 @@ console.log(`Array: [1,0,1]; Expected: 2; Actual: ${reduce([1,0,1])}`);
 Deatiled example: 
 ```javascript runnable
 function sum(arr, initial = 0) {
-    if (arr.length == 0) {
+    if (arr.length === 0) {
         return initial;
     }
     return sum(arr.slice(1), initial + arr[0]);
