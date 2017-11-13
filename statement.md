@@ -1,5 +1,7 @@
 # Recursion
 
+> An act of a function calling itself. Recursion is used to solve problems that contain smaller sub-problems. A recursive function can receive two inputs: a base case (ends recursion) or a recursive case (continues recursion). (MDN)
+
 ## Use cases
 
 ### Sum function with traditional for loop
@@ -40,4 +42,21 @@ function sum(arr, initial = 0) {
 
 console.log(`Array: [1,2,3]; Expected: 6; Actual: ${sum([1,2,3])}`);
 console.log(`Array: [1,0,1]; Expected: 2; Actual: ${sum([1,0,1])}`);
+```
+
+### Deep map function without recursion
+
+```javascript runnable
+function deepMapAtoB(arr) {
+    arr.map(val => {
+        if (Array.isArray(value)) {
+            return value.map(nestedValue => {
+                return nestedValue === 'a' ? 'b' : nestedValue;
+            });
+            return value === 'a' ? 'b' : value;
+        }
+    });
+}
+
+console.log(`Given: ['a', ['a'], 'c']; Result: ${deepMapAtoB(['a', ['a'], 'c'])};
 ```
