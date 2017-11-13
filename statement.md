@@ -65,3 +65,8 @@ function deepMapAtoB(arr) {
 
 console.log(`Given: ["a",["a"],"c"]; Result: ${JSON.stringify(deepMapAtoB(["a",["a"],"c"]))}`);
 ```
+
+## Translated resources
+
+https://learn.javascript.ru/recursion
+https://karmazzin.gitbooks.io/eloquentjavascript_ru/content/chapters/chapter3.html 
