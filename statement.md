@@ -34,16 +34,6 @@ console.log(`Array: [1,2,3]; Expected: 6; Actual: ${sum([1,2,3])}`);
 console.log(`Array: [1,0,1]; Expected: 2; Actual: ${sum([1,0,1])}`);
 ```
 
-Short example:
-```javascript runnable
-function sum(arr, initial = 0) {
-    return arr.length === 0 ? initial : sum(arr.slice(1), initial + arr[0]);
-}
-
-console.log(`Array: [1,2,3]; Expected: 6; Actual: ${sum([1,2,3])}`);
-console.log(`Array: [1,0,1]; Expected: 2; Actual: ${sum([1,0,1])}`);
-```
-
 ### Deep map function without recursion
 
 ```javascript runnable
