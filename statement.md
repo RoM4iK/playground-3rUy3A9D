@@ -48,15 +48,30 @@ console.log(`Array: [1,0,1]; Expected: 2; Actual: ${sum([1,0,1])}`);
 
 ```javascript runnable
 function deepMapAtoB(arr) {
-    arr.map(val => {
+    return arr.map(value => {
         if (Array.isArray(value)) {
             return value.map(nestedValue => {
                 return nestedValue === 'a' ? 'b' : nestedValue;
             });
-            return value === 'a' ? 'b' : value;
         }
+        return value === 'a' ? 'b' : value;
     });
 }
 
-console.log(`Given: ['a', ['a'], 'c']; Result: ${deepMapAtoB(['a', ['a'], 'c'])};
+console.log(`Given: ["a",["a"],"c"]; Result: ${JSON.stringify(deepMapAtoB(["a",["a"],"c"]))}`);
+```
+
+### Deep map function with recursion
+
+```javascript runnable
+function deepMapAtoB(arr) {
+    return arr.map(value => {
+        if (Array.isArray(value)) {
+            return deepMapAtoB(value);
+        }
+        return value === 'a' ? 'b' : value;
+    });
+}
+
+console.log(`Given: ["a",["a"],"c"]; Result: ${JSON.stringify(deepMapAtoB(["a",["a"],"c"]))}`);
 ```
